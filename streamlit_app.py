@@ -29,18 +29,20 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Title for the app
-st.title('AdvaCrop Data Solutions')
-# Add an image to the layout with adjusted size
-image_url = "main.jpeg"  # Replace with the actual URL or path of your image
-st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=True)
 
 
 # Sidebar with radio buttons
-selection = st.sidebar.radio("Select an Option", ["Use Case Description", "Demonstration", "Team Description"])
+selection = st.sidebar.radio("Select an Option", ["Home", "Use Case Description", "Demonstration", "Team Description"])
 
 # Display content based on the selected radio button
-if selection == "Use Case Description":
+if selection =="Home":
+       # Title for the app
+       st.title('AdvaCrop Data Solutions')
+       # Add an image to the layout with adjusted size
+       image_url = "main.jpeg"  # Replace with the actual URL or path of your image
+       st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=100)
+
+elif selection == "Use Case Description":
     st.header("Use Case Description")
     st.write("Provide detailed information on the use cases of AdvaCrop Data Solutions.")
     # Add more content specific to the use case description
