@@ -88,7 +88,7 @@ elif selection == "Team Description":
             "url": "https://www.linkedin.com/in/pawan-balijireddi/",
         },
         {
-            "name": "\n\n\n##Geethan 🧑‍🔬",
+            "name": ##"\n\n\nGeethan 🧑‍🔬",
             "description": "  The Tools Explorer\n",
             "responsibilities": "\n**Responsibilities:** Geethan, the Tools Explorer, embarks on a journey of extensive research and comparison to identify the most effective tools and approaches. His analytical mind is the team's compass, guiding them through the labyrinth of options. From data extraction methods to evaluating tools, Geethan's insights shape the team's strategic decisions and technological advancements.\n",
             "url": "https://www.linkedin.com/in/geethan-b-899b1a233/",
