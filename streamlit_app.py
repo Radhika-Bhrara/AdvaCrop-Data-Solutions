@@ -60,7 +60,7 @@ elif selection == "Team Description":
         {
             
             "line": "\n",
-            "name": "**Radhika** 👩‍💼",
+            "name": "Radhika 👩‍💼",
             "description": "  The Visionary Maestro \n",
             "responsibilities": "\n**Responsibilities:** As the team leader, Radhika orchestrates the team's success by overseeing various critical aspects. From ensuring a sleek and user-friendly Graphical User Interface (GUI) to meticulously collecting and managing code, maintaining Git tickets, and curating an organized repository, Radhika is the backbone of the development process. Not stopping there, she delves into extensive research and documentation, laying the foundation for innovation.\n",
             "url": "https://www.linkedin.com/in/radhika-bhrara/",
