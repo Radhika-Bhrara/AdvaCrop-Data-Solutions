@@ -97,6 +97,6 @@ elif selection == "Team Description":
 
     # Display team members' information with emojis
     for member_info in team_members_info:
-        st.write(f"{member_info['name']}\n{member_info['description']}{member_info['responsibilities']}\n[LinkedIn Profile]({member_info['url']})")
+        st.write(f"# {member_info['name']}\n##{member_info['description']}{member_info['responsibilities']}\n[LinkedIn Profile]({member_info['url']})")
 
     st.write("\n\n\n\n\n Together, these diverse talents form the Algorithmic Alchemists - a team that transcends conventional boundaries, blending innovation, expertise, and passion to create a groundbreaking solution in the realm of AdvaCrop Data Solutions. Each member brings a unique skill set, contributing to the team's collective brilliance and propelling them toward unprecedented success.")
