@@ -58,11 +58,11 @@ elif selection == "Team Description":
     # Define team members with linked URLs and emojis
     team_members = {
         "Radhika (Team Leader)": {"link": "https://www.linkedin.com/in/radhika-bhrara/", "emoji": "👩‍💼"},
-        "Sushant": {"link": "insert_link_for_Sushant_here", "emoji": "👨‍💻"},
-        "Muzaffar": {"link": "insert_link_for_Muzaffar_here", "emoji": "🤖"},
-        "Pavan": {"link": "insert_link_for_Pavan_here", "emoji": "📊"},
-        "Priyanshu": {"link": "insert_link_for_Priyanshu_here", "emoji": "🔧"},
-        "Geethan": {"link": "insert_link_for_Geethan_here", "emoji": "🧑‍🔬"},
+        "Sushant": {"link": "https://www.linkedin.com/in/sushant-thombre-050ab8154/", "emoji": "👨‍💻"},
+        "Muzaffar": {"link": "https://www.linkedin.com/in/muzaffar-tasgoankar/", "emoji": "🤖"},
+        "Pavan": {"link": "https://www.linkedin.com/in/pawan-balijireddi/", "emoji": "📊"},
+        "Priyanshu": {"link": "https://www.linkedin.com/in/08-priyanshu-jangir/", "emoji": "🔧"},
+        "Geethan": {"link": "https://www.linkedin.com/in/geethan-b-899b1a233/", "emoji": "🧑‍🔬"},
     }
     
     # Display team members with linked URLs and emojis
