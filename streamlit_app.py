@@ -30,7 +30,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Add an image to the layout
-image_url = "url_to_your_image"  # Replace with the actual URL of your image
+image_url = "main.jpeg"  # Replace with the actual URL of your image
 st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=True)
 
 # Your Streamlit app logic can continue from here
