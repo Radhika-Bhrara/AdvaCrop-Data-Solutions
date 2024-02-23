@@ -53,9 +53,22 @@ elif selection == "Demonstration":
     # Add more content specific to the demonstration
 
 elif selection == "Team Description":
-    st.header("Team Description")
-    st.write("Introduce the Algorithmic Alchemists team working on AdvaCrop Data Solutions.")
+    st.header("Team Description - Algorithmic Alchemists 🚀")
+    
+    # Define team members with linked URLs and emojis
+    team_members = {
+        "Radhika (Team Leader)": {"link": "https://www.linkedin.com/in/radhika-bhrara/", "emoji": "👩‍💼"},
+        "Sushant": {"link": "insert_link_for_Sushant_here", "emoji": "👨‍💻"},
+        "Muzaffar": {"link": "insert_link_for_Muzaffar_here", "emoji": "🤖"},
+        "Pavan": {"link": "insert_link_for_Pavan_here", "emoji": "📊"},
+        "Priyanshu": {"link": "insert_link_for_Priyanshu_here", "emoji": "🔧"},
+        "Geethan": {"link": "insert_link_for_Geethan_here", "emoji": "🧑‍🔬"},
+    }
+    
+    # Display team members with linked URLs and emojis
+    for member, details in team_members.items():
+        st.write(f"{details['emoji']} [{member}]({details['link']})")
+
     # Add more content specific to the team description
 
 # Your Streamlit app logic can continue from here
-# For example, you can add input widgets, data processing, and visualizations
