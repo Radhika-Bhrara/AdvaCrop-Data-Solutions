@@ -52,23 +52,50 @@ elif selection == "Demonstration":
     st.write("Demonstrate the functionality and features of AdvaCrop Data Solutions.")
     # Add more content specific to the demonstration
 
+import streamlit as st
+
+# Add a header for Team Description
 elif selection == "Team Description":
     st.header("Team Description - Algorithmic Alchemists 🚀")
-    
-    # Define team members with linked URLs and emojis
-    team_members = {
-        "Radhika (Team Leader)": {"link": "https://www.linkedin.com/in/radhika-bhrara/", "emoji": "👩‍💼"},
-        "Sushant": {"link": "https://www.linkedin.com/in/sushant-thombre-050ab8154/", "emoji": "👨‍💻"},
-        "Muzaffar": {"link": "https://www.linkedin.com/in/muzaffar-tasgoankar/", "emoji": "🤖"},
-        "Pavan": {"link": "https://www.linkedin.com/in/pawan-balijireddi/", "emoji": "📊"},
-        "Priyanshu": {"link": "https://www.linkedin.com/in/08-priyanshu-jangir/", "emoji": "🔧"},
-        "Geethan": {"link": "https://www.linkedin.com/in/geethan-b-899b1a233/", "emoji": "🧑‍🔬"},
-    }
-    
-    # Display team members with linked URLs and emojis
-    for member, details in team_members.items():
-        st.write(f"{details['emoji']} [{member}]({details['link']})")
 
-    # Add more content specific to the team description
+    # Team members' information with emojis
+    team_members_info = [
+        {
+            "name": "Radhika 👩‍💼",
+            "description": "The Visionary Maestro - Responsibilities: As the team leader, Radhika orchestrates the team's success by overseeing various critical aspects. From ensuring a sleek and user-friendly Graphical User Interface (GUI) to meticulously collecting and managing code, maintaining Git tickets, and curating an organized repository, Radhika is the backbone of the development process. Not stopping there, she delves into extensive research and documentation, laying the foundation for innovation.",
+            "url": "https://www.linkedin.com/in/radhika-bhrara/",
+        },
+        {
+            "name": "Sushant 👨‍💻",
+            "description": "The Product Sage - Responsibilities: Sushant, the Product Sage, brings a keen eye for detail and innovation to the team. He spearheads product research, meticulously finalizes different attributes and parameters, and selects features that not only meet but exceed expectations. With a passion for excellence, Sushant is the driving force behind the product's evolution and its alignment with user needs.",
+            "url": "https://www.linkedin.com/in/sushant-thombre-050ab8154/",
+        },
+        {
+            "name": "Muzaffar 🤖",
+            "description": "The Techno-Artisan - Responsibilities: Muzaffar, the Techno-Artisan, is the team's tech image guru. With an exceptional eye for detail, he excels as the code reviewer and merger, ensuring that the team's work is not only efficient but also elegant. His expertise extends to crop classification, where he utilizes his technical prowess to enhance the precision and reliability of the algorithms at play.",
+            "url": "https://www.linkedin.com/in/muzaffar-tasgoankar/",
+        },
+        {
+            "name": "Priyanshu 🔧",
+            "description": "The Integration Alchemist - Responsibilities: Priyanshu, the Integration Alchemist, is the maestro behind seamless API integration and expertly navigates the realms of web scraping. His tireless research efforts ensure that the team is always on the cutting edge of data acquisition. With a penchant for detail, Priyanshu ensures that data flows seamlessly into the system, supporting the team's goals.",
+            "url": "https://www.linkedin.com/in/08-priyanshu-jangir/",
+        },
+        {
+            "name": "Pavan 📊",
+            "description": "The Model Maestro - Responsibilities: Pavan, the Model Maestro, takes center stage in the intricate world of model loading, training, and the classification of parameters. His expertise is crucial in ensuring that the algorithms employed are not only cutting-edge but also finely tuned to deliver precise results. Pavan's dedication to model excellence is the heartbeat of the team's success.",
+            "url": "https://www.linkedin.com/in/pawan-balijireddi/",
+        },
+        {
+            "name": "Geethan 🧑‍🔬",
+            "description": "The Tools Explorer - Responsibilities: Geethan, the Tools Explorer, embarks on a journey of extensive research and comparison to identify the most effective tools and approaches. His analytical mind is the team's compass, guiding them through the labyrinth of options. From data extraction methods to evaluating tools, Geethan's insights shape the team's strategic decisions and technological advancements.",
+            "url": "https://www.linkedin.com/in/geethan-b-899b1a233/",
+        },
+    ]
 
-# Your Streamlit app logic can continue from here
+    # Display team members' information with emojis
+    for member_info in team_members_info:
+        st.write(f"**{member_info['name']}**\n{member_info['description']}\n[LinkedIn Profile]({member_info['url']})")
+
+    st.write("\n Together, these diverse talents form the Algorithmic Alchemists - a team that transcends conventional boundaries, blending innovation, expertise, and passion to create a groundbreaking solution in the realm of AdvaCrop Data Solutions. Each member brings a unique skill set, contributing to the team's collective brilliance and propelling them toward unprecedented success. ")
+
+# Rest of your Streamlit app logic...
