@@ -59,16 +59,16 @@ elif selection == "Team Description":
     team_members_info = [
         {
             
-            "line": "\n",
-            "name": "Radhika 👩‍💼",
+            "line": "\n\n\n",
+            "name": " Radhika 👩‍💼",
             "description": "  The Visionary Maestro \n",
             "responsibilities": "\n**Responsibilities:** As the team leader, Radhika orchestrates the team's success by overseeing various critical aspects. From ensuring a sleek and user-friendly Graphical User Interface (GUI) to meticulously collecting and managing code, maintaining Git tickets, and curating an organized repository, Radhika is the backbone of the development process. Not stopping there, she delves into extensive research and documentation, laying the foundation for innovation.\n",
             "url": "https://www.linkedin.com/in/radhika-bhrara/",
         },
         {
             
-            "line": "\n",
-            "name": "\n\n\n**Sushant** 👨‍💻",
+            "line": "\n\n\n",
+            "name": "  Sushant 👨‍💻",
             "description": "  The Product Sage\n",
             "responsibilities": "\n**Responsibilities:** Sushant, the Product Sage, brings a keen eye for detail and innovation to the team. He spearheads product research, meticulously finalizes different attributes and parameters, and selects features that not only meet but exceed expectations. With a passion for excellence, Sushant is the driving force behind the product's evolution and its alignment with user needs.\n",
             "url": "https://www.linkedin.com/in/sushant-thombre-050ab8154/",
@@ -105,6 +105,6 @@ elif selection == "Team Description":
 
     # Display team members' information with emojis
     for member_info in team_members_info:
-        st.write(f"\n\n{member_info['line']}\n##{member_info['name']}\n{member_info['description']}{member_info['responsibilities']}\n[LinkedIn Profile]({member_info['url']})")
+        st.write(f"\n\n{member_info['line']}\n##{member_info['name']}\n##{member_info['description']}{member_info['responsibilities']}\n[LinkedIn Profile]({member_info['url']})")
 
     st.write("\n\n\n\n\n Together, these diverse talents form the Algorithmic Alchemists - a team that transcends conventional boundaries, blending innovation, expertise, and passion to create a groundbreaking solution in the realm of AdvaCrop Data Solutions. Each member brings a unique skill set, contributing to the team's collective brilliance and propelling them toward unprecedented success.")
