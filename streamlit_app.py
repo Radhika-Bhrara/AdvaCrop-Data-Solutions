@@ -29,10 +29,31 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Add an image to the layout
-image_url = "main.jpeg"  # Replace with the actual URL of your image
-st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=True)
+# Title for the app
 st.title('AdvaCrop Data Solutions')
+# Add an image to the layout with adjusted size
+image_url = "main.jpeg"  # Replace with the actual URL or path of your image
+st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=True)
+
+
+# Sidebar with radio buttons
+selection = st.sidebar.radio("Select an Option", ["Use Case Description", "Demonstration", "Team Description"])
+
+# Display content based on the selected radio button
+if selection == "Use Case Description":
+    st.header("Use Case Description")
+    st.write("Provide detailed information on the use cases of AdvaCrop Data Solutions.")
+    # Add more content specific to the use case description
+
+elif selection == "Demonstration":
+    st.header("Demonstration")
+    st.write("Demonstrate the functionality and features of AdvaCrop Data Solutions.")
+    # Add more content specific to the demonstration
+
+elif selection == "Team Description":
+    st.header("Team Description")
+    st.write("Introduce the Algorithmic Alchemists team working on AdvaCrop Data Solutions.")
+    # Add more content specific to the team description
+
 # Your Streamlit app logic can continue from here
 # For example, you can add input widgets, data processing, and visualizations
-
