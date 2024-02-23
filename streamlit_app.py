@@ -52,9 +52,6 @@ elif selection == "Demonstration":
     st.write("Demonstrate the functionality and features of AdvaCrop Data Solutions.")
     # Add more content specific to the demonstration
 
-import streamlit as st
-
-# Add a header for Team Description
 elif selection == "Team Description":
     st.header("Team Description - Algorithmic Alchemists 🚀")
 
