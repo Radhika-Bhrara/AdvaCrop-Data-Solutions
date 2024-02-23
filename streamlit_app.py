@@ -64,13 +64,13 @@ elif selection == "Team Description":
             "url": "https://www.linkedin.com/in/radhika-bhrara/",
         },
         {
-            "name": "\n\n\n#**Sushant** 👨‍💻",
+            "name": "\n\n\n**Sushant** 👨‍💻",
             "description": "  The Product Sage\n",
             "responsibilities": "\n**Responsibilities:** Sushant, the Product Sage, brings a keen eye for detail and innovation to the team. He spearheads product research, meticulously finalizes different attributes and parameters, and selects features that not only meet but exceed expectations. With a passion for excellence, Sushant is the driving force behind the product's evolution and its alignment with user needs.\n",
             "url": "https://www.linkedin.com/in/sushant-thombre-050ab8154/",
         },
         {
-            "name": "\n\n\n**Muzaffar** 🤖",
+            "name": "\n\n\n**#Muzaffar** 🤖",
             "description": "  The Techno-Artisan\n",
             "responsibilities": "\n**Responsibilities:** Muzaffar, the Techno-Artisan, is the team's tech image guru. With an exceptional eye for detail, he excels as the code reviewer and merger, ensuring that the team's work is not only efficient but also elegant. His expertise extends to crop classification, where he utilizes his technical prowess to enhance the precision and reliability of the algorithms at play.\n",
             "url": "https://www.linkedin.com/in/muzaffar-tasgoankar/",
