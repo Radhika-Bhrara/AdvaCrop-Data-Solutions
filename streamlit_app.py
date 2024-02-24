@@ -51,9 +51,7 @@ elif selection == "Use Case Description":
     # Add more content specific to the use case description
 
 elif selection == "Demonstration":
-    st.header("Crop Classification")
-    st.write("Demonstrate the functionality and features of AdvaCrop Data Solutions.")
-
+    
     # Load the pre-trained Keras model
     model = load_model("agricrop.h5")
     train_data={'jute': 0, 'maize': 1, 'rice': 2, 'sugarcane': 3, 'wheat': 4}
