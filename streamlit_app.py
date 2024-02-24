@@ -54,7 +54,7 @@ elif selection == "Demonstration":
     
     # Load the pre-trained Keras model
     model = load_model("agricrop.h5")
-    train_data={'jute': 0, 'maize': 1, 'rice': 2, 'sugarcane': 3, 'wheat': 4}
+    train_data={'Jute': 0, 'Maize': 1, 'Wheat': 2, 'Sugarcane': 3, 'Rice': 4}
 
 
     # Function to make predictions
