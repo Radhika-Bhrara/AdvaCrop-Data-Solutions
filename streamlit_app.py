@@ -56,6 +56,8 @@ elif selection == "Demonstration":
 
     # Load the pre-trained Keras model
     model = load_model("agricrop.h5")
+    train_data1.class_indices={'jute': 0, 'maize': 1, 'rice': 2, 'sugarcane': 3, 'wheat': 4}
+
 
     # Function to make predictions
     def predict_crop_label(image):
@@ -64,7 +66,7 @@ elif selection == "Demonstration":
         img = img.reshape(1, 224, 224, 3)
         prediction = model.predict_on_batch(img).argmax()
         return list(train_data1.class_indices.keys())[prediction]
-
+    
     # Streamlit app
     def main():
         st.title("Agriculture Crop Prediction App")
