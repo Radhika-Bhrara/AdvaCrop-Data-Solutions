@@ -3,3 +3,4 @@ pymysql
 plotly==5.3.1
 opencv-python-headless
 tensorflow
+streamlit_opencv_face_recognition
