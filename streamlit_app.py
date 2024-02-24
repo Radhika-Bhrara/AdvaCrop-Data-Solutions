@@ -48,9 +48,48 @@ elif selection == "Use Case Description":
     # Add more content specific to the use case description
 
 elif selection == "Demonstration":
-    st.header("Demonstration")
+    st.header("Crop Classification")
     st.write("Demonstrate the functionality and features of AdvaCrop Data Solutions.")
-    # Add more content specific to the demonstration
+    import streamlit as st
+    import cv2
+    import numpy as np
+    from tensorflow.keras.models import load_model
+    from tensorflow.keras.preprocessing.image import img_to_array
+    from PIL import Image
+
+    # Load the pre-trained Keras model
+    model = load_model("agricrop.h5")
+
+    # Function to make predictions
+    def predict_crop_label(image):
+           img = cv2.resize(image, (224, 224))
+           img = img / 255
+           img = img.reshape(1, 224, 224, 3)
+           prediction = model.predict_on_batch(img).argmax()
+           return list(train_data1.class_indices.keys())[prediction]
+    # Streamlit app
+    def main():
+           st.title("Agriculture Crop Prediction App")
+       
+           uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+       
+           if uploaded_file is not None:
+               # Read the image file
+               image = Image.open(uploaded_file)
+               st.image(image, caption="Uploaded Image.", use_column_width=True)
+       
+               # Convert the image to numpy array
+               img_array = np.array(image)
+       
+               # Make prediction
+               predicted_label = predict_crop_label(img_array)
+       
+               st.write(f"**Crop Prediction**: {predicted_label}")
+       
+     if __name__ == "__main__":
+            main()
+
+
 
 elif selection == "Team Description":
     st.title("Team Description - Algorithmic Alchemists 🚀")
