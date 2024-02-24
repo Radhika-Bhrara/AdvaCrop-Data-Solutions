@@ -85,9 +85,8 @@ elif selection == "Demonstration":
                predicted_label = predict_crop_label(img_array)
        
                st.write(f"**Crop Prediction**: {predicted_label}")
-       
-     if __name__ == "__main__":
-            main()
+   if __name__ == "__main__":
+          main()
 
 
 
