@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
 from streamlit_opencv_face_recognition import st_opencv
+
 import cv2
 from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
