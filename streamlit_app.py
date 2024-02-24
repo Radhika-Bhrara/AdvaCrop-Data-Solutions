@@ -1,18 +1,20 @@
 import streamlit as st
-import pymysql
-import pandas as pd
-import plotly.express as px
+import cv2
+import numpy as np
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
+from PIL import Image
 
 # Set page configuration
 st.set_page_config(page_title="AdvaCrop Data Solutions", initial_sidebar_state="auto")
 
 # Add a logo and title using HTML
 hide_default_format = """
-       <style>
-       #MainMenu {visibility: hidden; }
-       footer {visibility: hidden;}
-       </style>
-       """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+"""
 st.markdown(hide_default_format, unsafe_allow_html=True)
 
 # Extend the layout to the whole page
@@ -29,18 +31,16 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
-
 # Sidebar with radio buttons
 selection = st.sidebar.radio("Select an Option", ["Home", "Use Case Description", "Demonstration", "Team Description"])
 
 # Display content based on the selected radio button
-if selection =="Home":
-       # Title for the app
-       st.title('AdvaCrop Data Solutions')
-       # Add an image to the layout with adjusted size
-       image_url = "main.jpeg"  # Replace with the actual URL or path of your image
-       st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=100)
+if selection == "Home":
+    # Title for the app
+    st.title('AdvaCrop Data Solutions')
+    # Add an image to the layout with adjusted size
+    image_url = "main.jpeg"  # Replace with the actual URL or path of your image
+    st.image(image_url, caption='AdvaCrop Data Solutions', use_column_width=100)
 
 elif selection == "Use Case Description":
     st.header("Use Case Description")
@@ -50,45 +50,39 @@ elif selection == "Use Case Description":
 elif selection == "Demonstration":
     st.header("Crop Classification")
     st.write("Demonstrate the functionality and features of AdvaCrop Data Solutions.")
-    import streamlit as st
-    import cv2
-    import numpy as np
-    from tensorflow.keras.models import load_model
-    from tensorflow.keras.preprocessing.image import img_to_array
-    from PIL import Image
 
     # Load the pre-trained Keras model
     model = load_model("agricrop.h5")
 
     # Function to make predictions
     def predict_crop_label(image):
-           img = cv2.resize(image, (224, 224))
-           img = img / 255
-           img = img.reshape(1, 224, 224, 3)
-           prediction = model.predict_on_batch(img).argmax()
-           return list(train_data1.class_indices.keys())[prediction]
+        img = cv2.resize(image, (224, 224))
+        img = img / 255
+        img = img.reshape(1, 224, 224, 3)
+        prediction = model.predict_on_batch(img).argmax()
+        return list(train_data1.class_indices.keys())[prediction]
+
     # Streamlit app
     def main():
-           st.title("Agriculture Crop Prediction App")
-       
-           uploaded_file = st.file_uploader("Choose an image...", type="jpg")
-       
-           if uploaded_file is not None:
-               # Read the image file
-               image = Image.open(uploaded_file)
-               st.image(image, caption="Uploaded Image.", use_column_width=True)
-       
-               # Convert the image to numpy array
-               img_array = np.array(image)
-       
-               # Make prediction
-               predicted_label = predict_crop_label(img_array)
-       
-               st.write(f"**Crop Prediction**: {predicted_label}")
-       if __name__ == "__main__":
-              main()
+        st.title("Agriculture Crop Prediction App")
 
+        uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
+        if uploaded_file is not None:
+            # Read the image file
+            image = Image.open(uploaded_file)
+            st.image(image, caption="Uploaded Image.", use_column_width=True)
+
+            # Convert the image to numpy array
+            img_array = np.array(image)
+
+            # Make prediction
+            predicted_label = predict_crop_label(img_array)
+
+            st.write(f"**Crop Prediction**: {predicted_label}")
+
+    if __name__ == "__main__":
+        main()
 
 elif selection == "Team Description":
     st.title("Team Description - Algorithmic Alchemists 🚀")
